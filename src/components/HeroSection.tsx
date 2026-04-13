@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { Star, Clock, MapPin } from "lucide-react";
 import heroImg from "@/assets/hero-food.jpg";
-import ContactForm from "./ContactForm";
 
 const HeroSection = () => {
   return (
@@ -14,8 +13,7 @@ const HeroSection = () => {
       </div>
 
       <div className="container relative z-10 mx-auto px-6 py-24 lg:py-32">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-          {/* Left content */}
+        <div className="max-w-2xl mx-auto lg:mx-0">
           <motion.div
             initial={{ opacity: 0, x: -40 }}
             animate={{ opacity: 1, x: 0 }}
@@ -69,15 +67,6 @@ const HeroSection = () => {
                 <span className="text-sm text-secondary-foreground font-body">¡Buscanos en Waze!</span>
               </a>
             </div>
-          </motion.div>
-
-          {/* Right - Contact Form */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
-          >
-            <ContactForm />
           </motion.div>
         </div>
       </div>
