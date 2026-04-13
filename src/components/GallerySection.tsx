@@ -1,18 +1,20 @@
 import { motion } from "framer-motion";
 import heroImg from "@/assets/hero-food.jpg";
 import ambienteImg from "@/assets/ambiente.jpg";
-import ramenImg from "@/assets/ramen.jpg";
 import cocktailsImg from "@/assets/cocktails.jpg";
 import parrillaImg from "@/assets/parrilla.jpg";
 import burgerImg from "@/assets/burger.png";
+import cevicheImg from "@/assets/ceviche.jpg";
+import lacavaImg from "@/assets/lacava.jpg";
 
 const images = [
-  { src: ambienteImg, alt: "Ambiente del gastro park", span: "md:col-span-2 md:row-span-2" },
+  { src: ambienteImg, alt: "Chef preparando parrilla en La Comarca", span: "md:col-span-2 md:row-span-2" },
   { src: burgerImg, alt: "Hamburguesa gourmet triple", span: "" },
-  { src: cocktailsImg, alt: "Coctelería tropical", span: "" },
-  { src: ramenImg, alt: "Ramen de cerdo", span: "" },
-  { src: parrillaImg, alt: "Parrilla premium", span: "" },
-  { src: heroImg, alt: "Rice and beans con camarones", span: "md:col-span-2" },
+  { src: cocktailsImg, alt: "Gin & Tonic en Bar Punta Mona", span: "" },
+  { src: cevicheImg, alt: "Ceviche fresco de Leska's Caribbean Food", span: "" },
+  { src: parrillaImg, alt: "Costillas BBQ con elote y ensalada", span: "" },
+  { src: lacavaImg, alt: "Cócteles de colores en La Cava Gourmet Bar", span: "md:col-span-2" },
+  { src: heroImg, alt: "Rice and beans con pollo caribeño", span: "md:col-span-2" },
 ];
 
 const GallerySection = () => {
