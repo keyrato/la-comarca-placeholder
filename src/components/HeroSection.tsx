@@ -34,9 +34,9 @@ const HeroSection = () => {
             </div>
 
             <h1 className="font-heading text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.05] mb-6">
-              <span className="text-foreground">La Comarca</span>
+              <span className="text-foreground">LA COMARCA</span>
               <br />
-              <span className="text-gradient-gold">Gastro Park</span>
+              <span className="text-gradient-gold">GASTRO PARK</span>
             </h1>
 
             <p className="text-secondary-foreground text-lg md:text-xl max-w-lg mb-8 leading-relaxed font-body">

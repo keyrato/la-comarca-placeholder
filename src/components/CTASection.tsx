@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { MapPin, ArrowRight } from "lucide-react";
+import { MapPin, ArrowRight, Briefcase } from "lucide-react";
 
 const CTASection = () => {
   return (
@@ -22,20 +22,35 @@ const CTASection = () => {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="#top"
+              href="https://wa.me/50688888888"
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-gold-gradient text-primary-foreground font-body font-semibold py-4 px-8 rounded-xl flex items-center justify-center gap-2 hover:opacity-90 transition-opacity text-lg"
             >
-              Reservar ahora
+              Escribinos por WhatsApp
               <ArrowRight className="w-5 h-5" />
             </a>
             <a
-              href="https://www.google.com/maps/search/?api=1&query=La+Comarca+Gastro+Park+Guapiles"
+              href="https://waze.com/ul/hd1u6jt34e"
               target="_blank"
               rel="noopener noreferrer"
               className="border border-primary/30 text-primary font-body font-semibold py-4 px-8 rounded-xl flex items-center justify-center gap-2 hover:bg-primary/5 transition-colors text-lg"
             >
               <MapPin className="w-5 h-5" />
               Cómo llegar
+            </a>
+          </div>
+
+          {/* Trabaja con nosotros */}
+          <div className="mt-12 pt-8 border-t border-border/50">
+            <a
+              href="https://wa.me/50688888888?text=Hola%2C%20me%20interesa%20trabajar%20con%20ustedes"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary font-body text-sm transition-colors"
+            >
+              <Briefcase className="w-4 h-4" />
+              Trabaja con nosotros
             </a>
           </div>
         </motion.div>

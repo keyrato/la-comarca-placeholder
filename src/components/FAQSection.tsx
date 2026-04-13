@@ -8,7 +8,7 @@ import {
 
 const faqs = [
   { q: "¿Cuál es el horario de La Comarca?", a: "Bar 🍻: Lunes a Domingo de 12:00md a 12:00am. Comidas 🍱🌮: Martes a Domingo de 11:00am a 10:00pm. Lunes: CERRADO (solo bar)." },
-  { q: "¿Necesito hacer reservación?", a: "No es obligatorio, pero para grupos de 6 o más personas recomendamos reservar con anticipación para garantizar tu mesa." },
+  { q: "¿Qué restaurantes hay dentro?", a: "Dentro de La Comarca encontrarás Bar Punta Mona, Don Chente, Primitivos Gourmet, La Çava, Leska's Caribbean Food, La Fresquería, El Cevichito ¡y más!" },
   { q: "¿Tienen opciones vegetarianas o veganas?", a: "¡Sí! Contamos con opciones vegetarianas y podemos adaptar varios platos. Consultá con nuestro equipo al llegar." },
   { q: "¿Cuál es el rango de precios?", a: "Nuestros platos van desde ₡5,000 hasta ₡10,000 por persona, ofreciendo una excelente relación calidad-precio." },
   { q: "¿Ofrecen servicio de entrega?", a: "Sí, contamos con entrega sin contacto y pedidos desde el automóvil (drive-thru) para tu comodidad." },
