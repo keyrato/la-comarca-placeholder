@@ -1,4 +1,5 @@
 import { MapPin, Clock, Phone } from "lucide-react";
+import logo from "@/assets/logo.jpg";
 
 const Footer = () => {
   return (
@@ -6,9 +7,7 @@ const Footer = () => {
       <div className="container mx-auto px-6">
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           <div>
-            <h3 className="font-heading text-xl font-bold text-foreground mb-3">
-              La <span className="text-primary">Comarca</span>
-            </h3>
+            <img src={logo} alt="La Comarca Gastro Park" className="h-12 w-auto rounded mb-3" />
             <p className="text-muted-foreground text-sm font-body">
               Gastro Park · Restaurante familiar en Guápiles, Limón, Costa Rica.
             </p>
