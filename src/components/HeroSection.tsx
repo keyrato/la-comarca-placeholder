@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Star, Clock, MapPin } from "lucide-react";
 import heroImg from "@/assets/hero-food.jpg";
-import ContactForm from "./ContactForm";
+
 
 const HeroSection = () => {
   return (
