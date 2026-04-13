@@ -7,12 +7,12 @@ import {
 } from "@/components/ui/accordion";
 
 const faqs = [
-  { q: "¿Cuál es el horario de La Comarca?", a: "Abrimos de martes a domingo de 4:00 p.m. a 10:00 p.m. Los lunes permanecemos cerrados." },
+  { q: "¿Cuál es el horario de La Comarca?", a: "Bar 🍻: Lunes a Domingo de 12:00md a 12:00am. Comidas 🍱🌮: Martes a Domingo de 11:00am a 10:00pm. Lunes: CERRADO (solo bar)." },
   { q: "¿Necesito hacer reservación?", a: "No es obligatorio, pero para grupos de 6 o más personas recomendamos reservar con anticipación para garantizar tu mesa." },
   { q: "¿Tienen opciones vegetarianas o veganas?", a: "¡Sí! Contamos con opciones vegetarianas y podemos adaptar varios platos. Consultá con nuestro equipo al llegar." },
   { q: "¿Cuál es el rango de precios?", a: "Nuestros platos van desde ₡5,000 hasta ₡10,000 por persona, ofreciendo una excelente relación calidad-precio." },
   { q: "¿Ofrecen servicio de entrega?", a: "Sí, contamos con entrega sin contacto y pedidos desde el automóvil (drive-thru) para tu comodidad." },
-  { q: "¿Dónde están ubicados?", a: "Estamos en 66F9+RGR, Guápiles, Limón 70201, Costa Rica. ¡Te esperamos!" },
+  { q: "¿Dónde están ubicados?", a: "100 Norte y 75 Oeste de Servicentro JSM, Guápiles. Frente al parqueo de la subasta de la Expo Pococí. ¡Buscanos en Waze!" },
 ];
 
 const FAQSection = () => {
