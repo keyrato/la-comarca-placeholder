@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import logo from "@/assets/logo.jpg";
 
 const links = [
   { label: "Inicio", href: "#top" },
@@ -15,8 +16,8 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-xl border-b border-border/50">
       <div className="container mx-auto px-6 flex items-center justify-between h-16">
-        <a href="#top" className="font-heading text-xl font-bold text-foreground">
-          La <span className="text-primary">Comarca</span>
+        <a href="#top" className="flex items-center">
+          <img src={logo} alt="La Comarca Gastro Park" className="h-10 w-auto rounded" />
         </a>
 
         {/* Desktop */}
