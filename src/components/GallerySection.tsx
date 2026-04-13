@@ -4,15 +4,15 @@ import ambienteImg from "@/assets/ambiente.jpg";
 import ramenImg from "@/assets/ramen.jpg";
 import cocktailsImg from "@/assets/cocktails.jpg";
 import parrillaImg from "@/assets/parrilla.jpg";
-import cevicheImg from "@/assets/ceviche.jpg";
+import burgerImg from "@/assets/burger.png";
 
 const images = [
   { src: ambienteImg, alt: "Ambiente del gastro park", span: "md:col-span-2 md:row-span-2" },
-  { src: heroImg, alt: "Rice and beans con camarones", span: "" },
+  { src: burgerImg, alt: "Hamburguesa gourmet triple", span: "" },
   { src: cocktailsImg, alt: "Coctelería tropical", span: "" },
   { src: ramenImg, alt: "Ramen de cerdo", span: "" },
   { src: parrillaImg, alt: "Parrilla premium", span: "" },
-  { src: cevicheImg, alt: "Ceviche fresco", span: "md:col-span-2" },
+  { src: heroImg, alt: "Rice and beans con camarones", span: "md:col-span-2" },
 ];
 
 const GallerySection = () => {

@@ -3,13 +3,13 @@ import { UtensilsCrossed, Wine, Flame, Fish } from "lucide-react";
 import ramenImg from "@/assets/ramen.jpg";
 import cocktailsImg from "@/assets/cocktails.jpg";
 import parrillaImg from "@/assets/parrilla.jpg";
-import cevicheImg from "@/assets/ceviche.jpg";
+import burgerImg from "@/assets/burger.png";
 
 const services = [
+  { icon: Flame, title: "Hamburguesas Gourmet", desc: "La triple combinación de la perfección 🍔 con papas doradas", img: burgerImg },
   { icon: UtensilsCrossed, title: "Ramen Artesanal", desc: "Caldos ricos con ingredientes locales y asiáticos", img: ramenImg },
-  { icon: Wine, title: "Coctelería Tropical", desc: "Cócteles de autor con frutas caribeñas frescas", img: cocktailsImg },
-  { icon: Flame, title: "Parrilla Premium", desc: "Cortes selectos a la brasa con salsas de la casa", img: parrillaImg },
-  { icon: Fish, title: "Mariscos del Caribe", desc: "Rice and beans, ceviches y platos del mar", img: cevicheImg },
+  { icon: Wine, title: "Coctelería & Bar", desc: "Cócteles de autor y cervezas frías de 12md a 12am", img: cocktailsImg },
+  { icon: Fish, title: "Parrilla & Mariscos", desc: "Cortes selectos, rice and beans y platos del mar", img: parrillaImg },
 ];
 
 const ServicesSection = () => {
@@ -24,7 +24,7 @@ const ServicesSection = () => {
         >
           <span className="text-primary font-body text-sm uppercase tracking-[0.2em] mb-4 block">Nuestra Cocina</span>
           <h2 className="font-heading text-4xl md:text-5xl font-bold text-foreground mb-4">
-            Sabores que <span className="text-gradient-gold">enamoran</span>
+            Un viaje de <span className="text-gradient-gold">sabores</span> te espera
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto font-body">
             Una fusión de cocina caribeña, asiática y latinoamericana que solo encontrarás aquí.

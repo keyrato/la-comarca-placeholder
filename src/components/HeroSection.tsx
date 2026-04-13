@@ -40,22 +40,34 @@ const HeroSection = () => {
             </h1>
 
             <p className="text-secondary-foreground text-lg md:text-xl max-w-lg mb-8 leading-relaxed font-body">
-              Donde la gastronomía caribeña se encuentra con la innovación. 
-              Una experiencia culinaria única en el corazón de Guápiles, Limón.
+              ✨ Un viaje de sabores te espera. Gastronomía, bar y ambiente 
+              único en el corazón de Guápiles, Limón.
             </p>
 
-            <div className="flex flex-wrap gap-4 mb-8">
+            <div className="flex flex-wrap gap-3 mb-6">
               <div className="flex items-center gap-2 bg-secondary/50 rounded-full px-4 py-2">
                 <Clock className="w-4 h-4 text-primary" />
-                <span className="text-sm text-secondary-foreground font-body">4 p.m. – 10 p.m.</span>
+                <span className="text-sm text-secondary-foreground font-body">Bar: 12md – 12am</span>
               </div>
+              <div className="flex items-center gap-2 bg-secondary/50 rounded-full px-4 py-2">
+                <Clock className="w-4 h-4 text-primary" />
+                <span className="text-sm text-secondary-foreground font-body">Comidas: 11am – 10pm</span>
+              </div>
+            </div>
+            <div className="flex flex-wrap gap-3">
               <div className="flex items-center gap-2 bg-secondary/50 rounded-full px-4 py-2">
                 <MapPin className="w-4 h-4 text-primary" />
                 <span className="text-sm text-secondary-foreground font-body">Guápiles, Limón</span>
               </div>
-              <div className="flex items-center gap-2 bg-secondary/50 rounded-full px-4 py-2">
-                <span className="text-sm text-secondary-foreground font-body">₡5,000 – ₡10,000</span>
-              </div>
+              <a
+                href="https://waze.com/ul/hd1u6jt34e"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 bg-secondary/50 hover:bg-secondary rounded-full px-4 py-2 transition-colors"
+              >
+                <svg className="w-4 h-4 text-primary" fill="currentColor" viewBox="0 0 24 24"><path d="M20.54 6.63A8.99 8.99 0 0012.07 2C6.73 2 2.4 6.15 2.04 11.42a3.68 3.68 0 00-1.96 3.22 3.72 3.72 0 003.72 3.72c.2 0 .4-.02.59-.05A9.06 9.06 0 0012.07 22a8.93 8.93 0 005.9-2.2 3.69 3.69 0 004.95-1.72 3.72 3.72 0 00-2.38-5.45zM8.5 12a1.5 1.5 0 110-3 1.5 1.5 0 010 3zm7 0a1.5 1.5 0 110-3 1.5 1.5 0 010 3zm1.8 3.27A5.77 5.77 0 0112 17.5a5.77 5.77 0 01-5.3-2.23.75.75 0 011.18-.92A4.28 4.28 0 0012 16a4.28 4.28 0 004.12-1.65.75.75 0 011.18.92z"/></svg>
+                <span className="text-sm text-secondary-foreground font-body">¡Buscanos en Waze!</span>
+              </a>
             </div>
           </motion.div>
 
