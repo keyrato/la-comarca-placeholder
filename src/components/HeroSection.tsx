@@ -14,7 +14,7 @@ const HeroSection = () => {
       </div>
 
       <div className="container relative z-10 mx-auto px-6 py-24 lg:py-32">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <div className="max-w-2xl mx-auto lg:mx-0">
           {/* Left content */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
