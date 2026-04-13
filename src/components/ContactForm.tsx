@@ -14,8 +14,8 @@ const ContactForm = () => {
 
   return (
     <div className="bg-card/80 backdrop-blur-xl border border-border rounded-2xl p-8 glow-gold">
-      <h3 className="font-heading text-2xl font-bold text-foreground mb-2">Reservá tu mesa</h3>
-      <p className="text-muted-foreground text-sm mb-6 font-body">Completá el formulario y te contactamos</p>
+      <h3 className="font-heading text-2xl font-bold text-foreground mb-2">Contáctanos</h3>
+      <p className="text-muted-foreground text-sm mb-6 font-body">Escribinos y te respondemos pronto</p>
       
       <form onSubmit={handleSubmit} className="space-y-4">
         <input
@@ -45,7 +45,7 @@ const ContactForm = () => {
           className="w-full bg-secondary/50 border border-border rounded-lg px-4 py-3 text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 font-body text-sm transition-all"
         />
         <textarea
-          placeholder="Mensaje o detalles de tu reserva"
+          placeholder="¿En qué podemos ayudarte?"
           rows={3}
           maxLength={1000}
           value={formData.message}

@@ -27,9 +27,6 @@ const Navbar = () => {
               {l.label}
             </a>
           ))}
-          <a href="#top" className="bg-gold-gradient text-primary-foreground font-body font-semibold py-2 px-5 rounded-lg text-sm hover:opacity-90 transition-opacity">
-            Reservar
-          </a>
         </div>
 
         {/* Mobile toggle */}
@@ -46,9 +43,6 @@ const Navbar = () => {
               {l.label}
             </a>
           ))}
-          <a href="#top" onClick={() => setOpen(false)} className="block bg-gold-gradient text-primary-foreground font-body font-semibold py-2 px-5 rounded-lg text-sm text-center hover:opacity-90 transition-opacity">
-            Reservar
-          </a>
         </div>
       )}
     </nav>
