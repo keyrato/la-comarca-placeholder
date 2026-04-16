@@ -109,3 +109,11 @@
     box-shadow: 0 0 60px -15px hsl(var(--terracotta) / 0.25);
   }
 }
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
