@@ -35,8 +35,8 @@ export const MENU_ITEMS = [
     { name: "Empanadas de carne", desc: "Masa crujiente rellena de carne especiada", price: "Consultar" },
   ]},
   { category: "Platos fuertes", items: [
-    { name: "Rice and Beans con camarones", desc: "El clásico caribeño con camarones al ajillo", price: "Consultar" },
-    { name: "Ramen de cerdo", desc: "Caldo rico con cerdo, huevo y vegetales asiáticos", price: "Consultar" },
+    { name: "Rice and Beans con Camarones", desc: "El clásico caribeño elevado. Arroz con frijoles rojos en leche de coco con camarones frescos. Leska's Caribbean Food.", price: "Consultar" },
+    { name: "Ramen de Cerdo", desc: "Caldo profundo y reconfortante con cerdo tierno y fideos ramen. Único en Guápiles.", price: "Consultar" },
     { name: "Hamburguesa triple gourmet", desc: "La triple combinación de la perfección 🍔", price: "Consultar" },
     { name: "Costillas BBQ", desc: "Costillas ahumadas con salsa BBQ y elote", price: "Consultar" },
   ]},
@@ -64,12 +64,12 @@ export const EVENTS_PLACEHOLDER = [
 ] as const;
 
 export const FAQ_DATA = [
-  { q: "¿Qué locales hay dentro de La Comarca?", a: "Dentro encontrarás Bar Punta Mona, Don Chente, Primitivos Gourmet, La Çava, Leska's Caribbean Food, La Fresquería, El Cevichito ¡y más por venir!" },
-  { q: "¿Cuál es el horario?", a: "Bar 🍻: Lunes a Domingo de 12:00 m.d. a 12:00 a.m. Comidas 🍱🌮: Martes a Domingo de 11:00 a.m. a 10:00 p.m. Los lunes solo abre el bar." },
-  { q: "¿Necesito hacer reservación?", a: "¡No! Solo caé y disfrutá. No necesitás reservar, siempre hay espacio para vos." },
-  { q: "¿Tienen parqueo?", a: "¡Sí! Contamos con amplio parqueo gratuito para que lleguéis sin preocupaciones." },
-  { q: "¿Cuál es el rango de precios?", a: "Los platos van desde ₡5,000 hasta ₡10,000 por persona aproximadamente. Excelente relación calidad-precio." },
-  { q: "¿Cómo llego?", a: "Estamos a 100 m norte y 75 m oeste del Servicentro JSM en Guápiles, frente al parqueo de la subasta de la Expo Pococí. ¡Buscanos en Waze!" },
-  { q: "¿Ofrecen servicio de entrega?", a: "Sí, contamos con entrega sin contacto y pedidos desde el automóvil para tu comodidad." },
-  { q: "¿Tienen opciones vegetarianas?", a: "¡Sí! Varios locales ofrecen opciones vegetarianas. Consultá con nuestro equipo al llegar." },
+  { q: "¿Qué locales hay dentro de La Comarca?", a: "Bar Punta Mona, Don Chente, Primitivos Gourmet, La Çava, Leska's Caribbean Food, La Fresquería, El Cevichito, y más." },
+  { q: "¿Cuál es el horario?", a: "Bar: Lunes a Domingo, 12:00 m.d. – 12:00 a.m. Comidas: Martes a Domingo, 11:00 a.m. – 10:00 p.m. Lunes: comidas cerrado, bar abierto." },
+  { q: "¿Necesito hacer reservación?", a: "No, no necesitás reservar. Podés llegar directamente." },
+  { q: "¿Tienen parqueo?", a: "Sí, amplio parqueo disponible sin costo." },
+  { q: "¿Cuál es el rango de precios?", a: "Entre ₡5,000 y ₡10,000 por persona según el local." },
+  { q: "¿Cómo llego?", a: "100 m norte y 75 m oeste del Servicentro JSM, frente al parqueo de la subasta de la Expo Pococí, Guápiles. Buscanos en Waze: waze.com/ul/hd1u6jt2e0" },
+  { q: "¿Ofrecen servicio de entrega?", a: "Sí, entrega sin contacto y pedidos desde el automóvil. Escribinos por WhatsApp: +506 6141 5178" },
+  { q: "¿Tienen opciones vegetarianas?", a: "Cada local maneja su menú. Consultanos por WhatsApp para orientarte." },
 ] as const;
