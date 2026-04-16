@@ -1,5 +1,16 @@
 import { motion } from "framer-motion";
-import { LOCALES, LINKS } from "@/lib/constants";
+import { LOCALES } from "@/lib/constants";
+
+// Map locale names to their menu slugs
+const SLUG_MAP: Record<string, string> = {
+  "Bar Punta Mona": "bar-punta-mona",
+  "Don Chente": "don-chente",
+  "Primitivos Gourmet": "primitivos-gourmet",
+  "La Çava": "la-cava",
+  "Leska's Caribbean Food": "leskas-caribbean-food",
+  "La Fresquería": "la-fresqueria",
+  "El Cevichito": "el-cevichito",
+};
 
 const LocalesSection = () => (
   <section id="locales" className="py-24 bg-dark-gradient">
@@ -20,29 +31,39 @@ const LocalesSection = () => (
       </motion.div>
 
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
-        {LOCALES.map((local, i) => (
-          <motion.div
-            key={local.name}
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: i * 0.08 }}
-            className="group bg-card border border-border rounded-2xl p-6 hover:border-primary/30 hover:glow-gold transition-all duration-500"
-          >
-            <div className="text-4xl mb-4">{local.emoji}</div>
-            <h3 className="font-heading text-xl font-semibold text-foreground mb-1">{local.name}</h3>
-            <p className="font-body text-xs text-primary uppercase tracking-wider mb-3">{local.category}</p>
-            <p className="text-muted-foreground text-sm font-body leading-relaxed mb-4">{local.desc}</p>
-            <a
-              href={LINKS.whatsapp}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-primary font-body text-sm font-medium hover:underline"
+        {LOCALES.map((local, i) => {
+          const slug = SLUG_MAP[local.name];
+          return (
+            <motion.div
+              key={local.name}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.08 }}
+              className="group bg-card border border-border rounded-2xl p-6 hover:border-primary/30 hover:glow-gold transition-all duration-500"
             >
-              Consultar →
-            </a>
-          </motion.div>
-        ))}
+              <div className="text-4xl mb-4">{local.emoji}</div>
+              <h3 className="font-heading text-xl font-semibold text-foreground mb-1">{local.name}</h3>
+              <p className="font-body text-xs text-primary uppercase tracking-wider mb-3">{local.category}</p>
+              <p className="text-muted-foreground text-sm font-body leading-relaxed mb-4">{local.desc}</p>
+              {slug ? (
+                <a
+                  href={`#menu?local=${slug}`}
+                  className="text-primary font-body text-sm font-medium hover:underline"
+                >
+                  Ver menú →
+                </a>
+              ) : (
+                <a
+                  href="#menu"
+                  className="text-primary font-body text-sm font-medium hover:underline"
+                >
+                  Consultar →
+                </a>
+              )}
+            </motion.div>
+          );
+        })}
       </div>
 
       <motion.p

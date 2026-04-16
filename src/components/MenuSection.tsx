@@ -1,10 +1,25 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { MENU_ITEMS, LINKS } from "@/lib/constants";
-import { ArrowRight } from "lucide-react";
+import { LOCALE_MENU, LINKS } from "@/lib/constants";
+import { ArrowRight, MessageCircle } from "lucide-react";
 
 const MenuSection = () => {
   const [active, setActive] = useState(0);
+
+  // Listen for hash changes to activate a locale tab
+  useEffect(() => {
+    const handleHash = () => {
+      const hash = window.location.hash;
+      if (hash.startsWith("#menu?local=")) {
+        const slug = hash.replace("#menu?local=", "");
+        const idx = LOCALE_MENU.findIndex((l) => l.slug === slug);
+        if (idx !== -1) setActive(idx);
+      }
+    };
+    handleHash();
+    window.addEventListener("hashchange", handleHash);
+    return () => window.removeEventListener("hashchange", handleHash);
+  }, []);
 
   return (
     <section id="menu" className="py-24 bg-warm-gradient">
@@ -20,23 +35,23 @@ const MenuSection = () => {
             Sabores que <span className="text-gradient-gold italic">enamoran</span>
           </h2>
           <p className="text-muted-foreground max-w-xl mx-auto font-body">
-            Una muestra de lo que te espera. Precios y disponibilidad pueden variar según el local.
+            Explorá lo que ofrece cada local. Precios y disponibilidad pueden variar.
           </p>
         </motion.div>
 
-        {/* Tabs */}
-        <div className="flex flex-wrap justify-center gap-2 mb-10">
-          {MENU_ITEMS.map((cat, i) => (
+        {/* Locale tabs — horizontally scrollable on mobile */}
+        <div className="flex overflow-x-auto gap-2 mb-10 pb-2 scrollbar-hide justify-start lg:justify-center">
+          {LOCALE_MENU.map((loc, i) => (
             <button
-              key={cat.category}
+              key={loc.slug}
               onClick={() => setActive(i)}
-              className={`font-body text-sm px-5 py-2.5 rounded-full transition-all duration-300 ${
+              className={`font-body text-sm px-5 py-2.5 rounded-full transition-all duration-300 whitespace-nowrap shrink-0 ${
                 active === i
                   ? "bg-primary text-primary-foreground"
                   : "bg-card border border-border text-muted-foreground hover:text-foreground hover:border-primary/30"
               }`}
             >
-              {cat.category}
+              {loc.locale}
             </button>
           ))}
         </div>
@@ -51,18 +66,32 @@ const MenuSection = () => {
             transition={{ duration: 0.3 }}
             className="max-w-3xl mx-auto space-y-3"
           >
-            {MENU_ITEMS[active].items.map((item) => (
-              <div
-                key={item.name}
-                className="flex items-start justify-between gap-4 bg-card border border-border rounded-xl p-5 hover:border-primary/20 transition-colors"
-              >
-                <div>
-                  <h4 className="font-heading text-lg text-foreground mb-1">{item.name}</h4>
-                  <p className="text-muted-foreground text-sm font-body">{item.desc}</p>
+            {LOCALE_MENU[active].items.length > 0 ? (
+              LOCALE_MENU[active].items.map((item) => (
+                <div
+                  key={item.name}
+                  className="flex items-start justify-between gap-4 bg-card border border-border rounded-xl p-5 hover:border-primary/20 transition-colors"
+                >
+                  <div>
+                    <h4 className="font-heading text-lg text-foreground mb-1">{item.name}</h4>
+                    <p className="text-muted-foreground text-sm font-body">{item.desc}</p>
+                  </div>
+                  <span className="text-primary font-body font-medium text-sm whitespace-nowrap shrink-0">{item.price}</span>
                 </div>
-                <span className="text-primary font-body font-medium text-sm whitespace-nowrap shrink-0">{item.price}</span>
+              ))
+            ) : (
+              <div className="text-center bg-card border border-border rounded-xl p-10">
+                <p className="text-muted-foreground font-body mb-4">Menú disponible pronto. Escribínos por WhatsApp.</p>
+                <a
+                  href={LINKS.whatsapp}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 bg-primary text-primary-foreground font-body font-semibold py-2.5 px-6 rounded-full hover:opacity-90 transition-opacity"
+                >
+                  <MessageCircle className="w-4 h-4" /> WhatsApp
+                </a>
               </div>
-            ))}
+            )}
           </motion.div>
         </AnimatePresence>
 

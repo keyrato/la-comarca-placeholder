@@ -28,32 +28,39 @@ export const HOURS = {
   food: { label: "Comidas 🍱🌮", name: "Restaurantes", schedule: "Martes a Domingo", time: "11:00 a.m. – 10:00 p.m.", closed: "Lunes: CERRADO" },
 } as const;
 
-export const MENU_ITEMS = [
-  { category: "Entradas", items: [
-    { name: "Patacones con guacamole", desc: "Plátano verde frito con guacamole fresco", price: "Consultar" },
-    { name: "Ceviche mixto", desc: "Pescado y camarón marinado en limón con cilantro", price: "Consultar" },
+export const LOCALE_MENU = [
+  { locale: "Bar Punta Mona", slug: "bar-punta-mona", items: [
+    { name: "Gin & Tonic artesanal", desc: "Gin premium con tónica y botánicos frescos", price: "Consultar" },
+    { name: "Cerveza artesanal", desc: "Selección rotativa de cervezas locales", price: "Consultar" },
+    { name: "Agua de sapo", desc: "Bebida tradicional costarricense con jengibre y limón", price: "Consultar" },
+  ]},
+  { locale: "Don Chente", slug: "don-chente", items: [
+    { name: "Casado completo", desc: "Arroz, frijoles, ensalada, plátano y proteína del día", price: "Consultar" },
+    { name: "Gallos de carne", desc: "Tortillas de maíz con carne mechada y chimichurri", price: "Consultar" },
     { name: "Empanadas de carne", desc: "Masa crujiente rellena de carne especiada", price: "Consultar" },
   ]},
-  { category: "Platos fuertes", items: [
-    { name: "Rice and Beans con Camarones", desc: "El clásico caribeño elevado. Arroz con frijoles rojos en leche de coco con camarones frescos. Leska's Caribbean Food.", price: "Consultar" },
+  { locale: "Primitivos Gourmet", slug: "primitivos-gourmet", items: [
     { name: "Ramen de Cerdo", desc: "Caldo profundo y reconfortante con cerdo tierno y fideos ramen. Único en Guápiles.", price: "Consultar" },
     { name: "Hamburguesa triple gourmet", desc: "La triple combinación de la perfección 🍔", price: "Consultar" },
     { name: "Costillas BBQ", desc: "Costillas ahumadas con salsa BBQ y elote", price: "Consultar" },
   ]},
-  { category: "Mariscos", items: [
+  { locale: "La Çava", slug: "la-cava", items: [
+    { name: "Tabla de vinos y quesos", desc: "Selección de vinos con quesos artesanales", price: "Consultar" },
+    { name: "Tres leches", desc: "El clásico postre centroamericano", price: "Consultar" },
+  ]},
+  { locale: "Leska's Caribbean Food", slug: "leskas-caribbean-food", items: [
+    { name: "Rice and Beans con Camarones", desc: "El clásico caribeño elevado. Arroz con frijoles rojos en leche de coco con camarones frescos.", price: "Consultar" },
+    { name: "Patacones con guacamole", desc: "Plátano verde frito con guacamole fresco", price: "Consultar" },
+  ]},
+  { locale: "La Fresquería", slug: "la-fresqueria", items: [
+    { name: "Batido tropical", desc: "Frutas frescas de temporada", price: "Consultar" },
+    { name: "Agua fresca del día", desc: "Preparación artesanal con frutas naturales", price: "Consultar" },
+  ]},
+  { locale: "El Cevichito", slug: "el-cevichito", items: [
+    { name: "Ceviche mixto", desc: "Pescado y camarón marinado en limón con cilantro", price: "Consultar" },
     { name: "Ceviche de camarón", desc: "Camarón fresco con limón, cebolla morada y chile", price: "Consultar" },
     { name: "Pescado entero frito", desc: "Pescado del día con ensalada y patacones", price: "Consultar" },
     { name: "Camarones al coco", desc: "Camarones en salsa de coco con arroz", price: "Consultar" },
-  ]},
-  { category: "Bebidas", items: [
-    { name: "Gin & Tonic artesanal", desc: "Gin premium con tónica y botánicos frescos", price: "Consultar" },
-    { name: "Cerveza artesanal", desc: "Selección rotativa de cervezas locales", price: "Consultar" },
-    { name: "Batido tropical", desc: "Frutas frescas de temporada", price: "Consultar" },
-    { name: "Agua de sapo", desc: "Bebida tradicional costarricense con jengibre y limón", price: "Consultar" },
-  ]},
-  { category: "Postres", items: [
-    { name: "Tres leches", desc: "El clásico postre centroamericano", price: "Consultar" },
-    { name: "Churros con chocolate", desc: "Churros crujientes con salsa de chocolate", price: "Consultar" },
   ]},
 ] as const;
 
