@@ -1,19 +1,26 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { LOCALE_MENU, LINKS } from "@/lib/constants";
-import { ArrowRight, MessageCircle } from "lucide-react";
+import { ArrowRight, MessageCircle, Camera, X } from "lucide-react";
 
 const MenuSection = () => {
   const [active, setActive] = useState(0);
+  const [photoItem, setPhotoItem] = useState<string | null>(null);
+  const sectionRef = useRef<HTMLElement>(null);
 
-  // Listen for hash changes to activate a locale tab
+  // Listen for hash changes to activate a locale tab + scroll
   useEffect(() => {
     const handleHash = () => {
       const hash = window.location.hash;
       if (hash.startsWith("#menu?local=")) {
         const slug = hash.replace("#menu?local=", "");
         const idx = LOCALE_MENU.findIndex((l) => l.slug === slug);
-        if (idx !== -1) setActive(idx);
+        if (idx !== -1) {
+          setActive(idx);
+          setTimeout(() => {
+            sectionRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+          }, 100);
+        }
       }
     };
     handleHash();
@@ -22,7 +29,7 @@ const MenuSection = () => {
   }, []);
 
   return (
-    <section id="menu" className="py-24 bg-warm-gradient">
+    <section id="menu" ref={sectionRef} className="py-24 bg-warm-gradient">
       <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -68,15 +75,47 @@ const MenuSection = () => {
           >
             {LOCALE_MENU[active].items.length > 0 ? (
               LOCALE_MENU[active].items.map((item) => (
-                <div
-                  key={item.name}
-                  className="flex items-start justify-between gap-4 bg-card border border-border rounded-xl p-5 hover:border-primary/20 transition-colors"
-                >
-                  <div>
-                    <h4 className="font-heading text-lg text-foreground mb-1">{item.name}</h4>
-                    <p className="text-muted-foreground text-sm font-body">{item.desc}</p>
+                <div key={item.name}>
+                  <div className="flex items-start justify-between gap-4 bg-card border border-border rounded-xl p-5 hover:border-primary/20 transition-colors">
+                    <div>
+                      <h4 className="font-heading text-lg text-foreground mb-1">{item.name}</h4>
+                      <p className="text-muted-foreground text-sm font-body">{item.desc}</p>
+                    </div>
+                    <button
+                      onClick={() => setPhotoItem(photoItem === item.name ? null : item.name)}
+                      className="flex items-center gap-1.5 text-primary/70 hover:text-primary font-body text-xs whitespace-nowrap shrink-0 transition-colors py-1 px-2 rounded-lg hover:bg-primary/10"
+                    >
+                      <Camera className="w-3.5 h-3.5" />
+                      <span>Ver foto</span>
+                    </button>
                   </div>
-                  <span className="text-primary font-body font-medium text-sm whitespace-nowrap shrink-0">{item.price}</span>
+
+                  {/* Photo placeholder accordion */}
+                  <AnimatePresence>
+                    {photoItem === item.name && (
+                      <motion.div
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: "auto", opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        transition={{ duration: 0.25 }}
+                        className="overflow-hidden"
+                      >
+                        <div className="relative bg-card border border-t-0 border-border rounded-b-xl p-8 flex flex-col items-center justify-center gap-3">
+                          <button
+                            onClick={() => setPhotoItem(null)}
+                            className="absolute top-3 right-3 text-muted-foreground hover:text-foreground transition-colors"
+                          >
+                            <X className="w-4 h-4" />
+                          </button>
+                          <div className="w-full max-w-sm aspect-[4/3] bg-background/50 border border-border rounded-lg flex flex-col items-center justify-center gap-3">
+                            <Camera className="w-10 h-10 text-muted-foreground/40" />
+                            <p className="font-heading text-foreground text-sm text-center px-4">{item.name}</p>
+                            <p className="text-muted-foreground text-xs font-body">Foto disponible pronto</p>
+                          </div>
+                        </div>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
                 </div>
               ))
             ) : (
