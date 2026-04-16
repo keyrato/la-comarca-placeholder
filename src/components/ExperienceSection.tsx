@@ -1,11 +1,12 @@
 import { motion } from "framer-motion";
-import { UtensilsCrossed, Music, Car, Users } from "lucide-react";
+import { UtensilsCrossed, Music, Car, Users, PawPrint } from "lucide-react";
 
 const highlights = [
   { icon: UtensilsCrossed, title: "Variedad de sabores", desc: "Múltiples opciones gastronómicas en un solo lugar, desde cocina caribeña hasta gourmet." },
   { icon: Music, title: "Ambiente y entretenimiento", desc: "Música en vivo, noches temáticas y la mejor vibra social de Guápiles." },
   { icon: Car, title: "Amplio parqueo", desc: "Llegá sin preocupaciones con estacionamiento cómodo y seguro." },
   { icon: Users, title: "Para todos", desc: "Familias, parejas, amigos — cualquier plan, cualquier momento." },
+  { icon: PawPrint, title: "Pet friendly y al aire libre", desc: "Tu mascota es bienvenida. Disfrutá el ambiente abierto en compañía de toda la familia." },
 ];
 
 const ExperienceSection = () => (
