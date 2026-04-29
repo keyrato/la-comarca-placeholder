@@ -25,3 +25,4 @@ const App = () => (
 );
 
 export default App;
+// La Comarca Gastro Park - Landing Page
